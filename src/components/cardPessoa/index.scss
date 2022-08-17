@@ -1,0 +1,29 @@
+.comp-pessoa{
+    border: 2em solid #000;
+    max-width: 8em;
+}
+
+img{
+    width: 5em;
+    height: 5em;
+}
+
+.box-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.tropical{
+    background-color: rgb(12, 115, 175);
+    color: #000;
+}
+
+.escuro{
+    background-color: #000;
+    color: #fff;
+}
+
+.claro{
+    background-color: #fff;
+    color: #000;
+}
