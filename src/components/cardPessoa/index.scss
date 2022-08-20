@@ -27,3 +27,13 @@ img{
     background-color: #fff;
     color: #000;
 }
+
+.box-column{
+    display: flex;
+    flex-direction: row;
+    background-color: aqua;
+}
+.alinhamento{
+    display: flex;
+    flex-direction: row;
+}

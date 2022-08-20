@@ -1,79 +1,75 @@
-import { useState } from  'react'
-import './index.scss' 
+import { useState } from 'react'
+import './index.scss'
+import BiscoitoSorte from '../../components/biscoito'
 
-export default function Renderizacao () {
+export default function Renderizacao(){
+
     const [mostrar, setMostrar] = useState(false);
-    const [acertou,setAcertou] = useState('');
-    const [resposta,setResposta] = useState(false);
 
-    function exibir() {
+    function exibir(){
         setMostrar(true);
     }
 
-    
-    function ross(event) {
-        if (event.target.checked) {
-            setResposta('Ele só fala de dinossauros')
-            setAcertou(false);
-        }
+    function Resposta(){
+        
     }
 
-    function joey(event) {
-        if (event.target.checked) {
-            setResposta('How youuu Dooooing?')
-            setAcertou(true);
+    function mostrardino(){
+        if(mostrar === true){
+            return 
+                <div>
+                    <img src='../images/image2.png'/>
+                </div>;
+        }
+        else{
+            return 
+                <div>
+                    <img src='../images/image1.png'/>
+                </div>;
         }
     }
-
-    
 
     return(
-        <div className='teste'>
-            <h1> Renderização Condicional </h1>
-            <hr/>
+        <div className='center'>
 
-            <div>
-                <button onClick={exibir}> Tenho uma duvidinha para vc... </button>
-
-                {mostrar === true &&
-                    <div>
-                        <h1> Quer namorar cmg </h1>
-                        <img src="http://pm1.narvii.com/6739/5d9c6c83a94259be719d91d64b4516084a30d347v2_00.jpg"/>
-                    </div>
-                }
-            </div>
+            <BiscoitoSorte exibir={exibir} mostrar={mostrar}/>
 
             <hr/>
 
-            <div>
-                <h1> Quiz Friends</h1>
+            <div className='friends'>
 
-                <h3>Qual personagem fala How you doiing?</h3>
+                <div className='friend-poser'>
+                    <h2>Friend's Poser?</h2>
+                </div>
 
-                <input type= "radio" name= "quiz" onChange={ross}/> Ross
-                <input type= "radio" name= "quiz" /> Monica
-                <input type= "radio" name= "quiz" /> Rachel
-                <input type= "radio" name= "quiz" /> Chandler
-                <input type= "radio" name= "quiz" /> Phoebe
-                <input type= "radio" name= "quiz" onChange={joey}/> Joey
+                <div className='dino'>
 
-                {resposta === '' && 
-                <div> Aguardando resposta... </div>
-                }
+                    {mostrar === true &&
+                        <div>
+                            <img src='../images/image1.png'/>
+                        </div>
+                    }
+                    
+                    {mostrar === false &&
+                        <div>
+                            <img src='../images/image2.png'/>
+                        </div>
+                    }
 
-                {resposta !== '' && 
-                <div> {resposta} </div>}
 
-
-                {acertou === true &&
-                    <div>
-                        <h2> Acertou!!!</h2>
-                        <img src='https://c.tenor.com/CR1Db0YzUwwAAAAd/joey-friends.gif' alt='' />
+                    <div className='perguntaa'>
+                        <p>Qual nome do personagem que ama dinossauros na série Friends?</p>
+                        <input
+                            onChange={mostrardino}
+                            type="text" 
+                            name="resposta"
+                            placeholder='Responda aqui'
+                        />
                     </div>
-                }
+                </div>
 
             </div>
-        </div>    
-    );
+        </div>
+    )
+
 }
-

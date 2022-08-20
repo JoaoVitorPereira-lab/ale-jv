@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import SessionRenderizacao from './pages/renderizacaoo'
+import Componentes from './pages/componentes'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <SessionRenderizacao />
+    <Componentes />
   </React.StrictMode>
 );

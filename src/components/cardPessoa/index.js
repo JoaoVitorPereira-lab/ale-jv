@@ -16,9 +16,16 @@ export default function CardPessoa (props) {
             return 'tropical';
     }
 
+    function alinhamento(){
+        if(props.alinhamento !== undefined)
+            return props.alinhamento;
+        else
+            return 'alinhamento';
+    }
+
 
     return (
-        <section className='comp-pessoa'> 
+        <section className={alinhamento()}> 
             <div className={lerTema()}>
                 <img src= {props.avatar} alt=""/>
 

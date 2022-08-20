@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import CardPessoa from './components/cardPessoa'
 
 function App() {
