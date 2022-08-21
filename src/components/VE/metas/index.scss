@@ -1,0 +1,82 @@
+body {
+    background-color: #F5F6FA;
+}
+
+.Page-metas {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+
+    ul {
+        display: inline-block;
+        padding-left: 1.4em;
+        padding-top: 1em;
+
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    h1 {
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        color: #646464;
+    }
+
+    input {
+        font-family: "inter", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17px;
+        padding: 1em 8.8em 1em 1.2em;
+        color: #BFBFBF;
+
+        background: #FFFFFF;
+        border: 1px solid #DFDFDF;  
+        box-shadow: 0px 0px 7px rgba(218, 218, 218, 0.3);
+        border-radius: 3px;
+    }
+
+    button {
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        text-align: center;
+        background-color: #0084FF;
+        color: #fff;
+        border-radius: 3px;
+        border: transparent;
+        padding: 1em 1.5em 1em 1.5em;
+        margin-left: 1em;
+    }
+
+    .div-metas input::placeholder {
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        color: #BFBFBF;
+    }
+
+    .div-metas input:focus {
+        outline: none;
+    }
+
+    .li-metas {
+        color: #646464;
+    }
+
+    .li-metas text {
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 2em;
+        margin-left: -.3em;
+        color: #646464;
+    }
+
+    span {
+        color: red;
+        cursor: pointer;
+    }
+}

@@ -1,5 +1,9 @@
 import { useState } from 'react'
 import './index.scss'
+import SobreMim from '../../components/VE/sobremim/sobremim'
+import Ficha from '../../components/VE/sobremim/ficha'
+import Metas from '../../components/VE/metas'
+import Planos from '../../components/VE/planos/index'
 
 export default function VariaveldeEstado(){
     
@@ -8,9 +12,18 @@ export default function VariaveldeEstado(){
     const [nascimento, setNascimento] = useState('');
     const [altura, setAltura] = useState('');
     const [peso, setPeso] = useState('');
+    const [checado, setChecado] = useState(false);
 
     function exibir(){
         setMostrar(true);
+    }
+
+    function checked(){
+        if(checado === false){
+            setChecado(true);
+        }
+        else
+            setChecado(false);
     }
 
     function calcularIMC(peso, altura){
@@ -18,82 +31,54 @@ export default function VariaveldeEstado(){
         return resposta;
     }
 
+    function idade(nasc){
+        var data = new Date();
+        var ano = data.getFullDate();
+        var mes = data.getMonth();
+        var dia = data.getDate();
+        var anoAtual = Number(ano+mes+dia);
+        
+        var anoUser = nasc.getFullDate();
+        var mesUser = nasc.getMonth();
+        var diaUser = nasc.getDate();
+        var nascimentoUser = Number(anoUser+mesUser+diaUser);
+
+        let resposta = Number(anoAtual - nascimentoUser);
+        return resposta;
+    }
+
     return(
         <div className='page-ve'>
-            <div className='div-ve'>
-                <div className='div-sobremim'>
-                    <h3> Sobre mim </h3>
+            <section className='sec-sobremim'>
+                <SobreMim 
+                    nome={nome}             nascimento={nascimento}
+                    setNome={setNome}       setNascimento={setNascimento}
 
-                    <div className='div-name-date'>
-                        <input  className='nome' 
-                                value={nome}
-                                onChange={e => setNome(e.target.value)} 
-                                type="text" 
-                                placeholder='Informe seu nome'
-                        />
-                        <input  className='data'
-                                value={nascimento}
-                                onChange={e => setNascimento(e.target.value)}
-                                type="date"/>
-                    </div>
+                    altura={altura}         peso={peso}         checado={checado}
+                    setAltura={setAltura}   setPeso={setPeso}   checked={checked}
 
-                    <div className='div-infos'>
-                        <input  className='medida'
-                                value={altura}
-                                onChange={e => setAltura(e.target.value)}
-                                type="text" 
-                                placeholder='Altura'
-                        />
-                        <input  className='medida peso' 
-                                value={peso}
-                                onChange={e => setPeso(e.target.value)}
-                                type="text" 
-                                placeholder='Peso'
-                        />
-                        <input className='input-checkbox' type="checkbox"/> <span className='span-check'> Trabalha Atualmente </span>
-                        <button onClick={exibir}> Visualizar </button>
-                    </div>
-                </div>
-        
-                {mostrar === true &&
-                    <div className='div-ficha'>
-                        <h2> Ficha </h2>
+                    exibir={exibir}
+                />
 
-                        <section className='sec-nome'>
-                            <text> Nome: </text>
-                            <span> {nome} </span>
-                        </section>
+                <Ficha
+                    mostrar={mostrar}
+                    nome={nome}
+                    nascimento={nascimento}
+                    altura={altura}
+                    peso={peso}
+                    calcularIMC={calcularIMC}
+                    checado={checado}
+                    idade={idade}
+                />
+            </section>
 
-                        <section className='sec-nascimento'>
-                            <text> Nascimento: </text>
-                            <span> {nascimento} (32 Anos) </span>
-                        </section>
+            <section className='sec-sobremim'>
+                <Metas />
+            </section>
 
-                        <section className='diferentona'>
-                            <div className='not-div'>
-                                <text> Altura: </text>
-                                <span className='span-diferentona alt'> {altura} </span>
-                            </div>
-
-                            <div>
-                                <text> Peso: </text>
-                                <span className='span-diferentona'> {peso} </span>
-                            </div>
-
-                            <div>
-                                <text> IMC: </text>
-                                <span className='span-diferentona'> {calcularIMC(peso, altura)} </span>
-                            </div>
-                        </section>
-
-                        <section className='sec-trabalha'>
-                            <text> Trabalha: </text>
-                            <span> Sim </span>
-                        </section>  
-                    </div>
-                }
-
-            </div>
+            <section className='sec-sobremim'>
+                <Planos />
+            </section>
         </div>
     )
 }

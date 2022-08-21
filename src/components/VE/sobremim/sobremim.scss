@@ -1,0 +1,81 @@
+.div-sobremim{
+    h3{
+        margin: 2em 0em 1.5em 0em;
+        font-family: 'Inter', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        color: #646464;
+    }
+    input{
+        font-family: "inter", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17px;
+        padding: .4em;
+        color: #BFBFBF;
+
+        background: #FFFFFF;
+        border: 1px solid #DFDFDF;  
+        box-shadow: 0px 0px 7px rgba(218, 218, 218, 0.3);
+        border-radius: 3px;
+    }
+    input:focus{
+        color: #000;
+        outline: none;
+    }
+    input::placeholder{
+        font-family: "inter", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17px;
+        color: #BFBFBF;
+    }
+
+    .div-infos{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        margin-top: 1em;
+    }
+    .nome{
+        width: 17.1em; height: 2.3em;
+    }
+    .data{
+        margin-left: 1em;
+        width: 10em; height: 2.3em;
+    }
+    .medida{
+        width: 4em; height: 2.3em;
+    }
+    .peso{
+        margin-left: 1em;
+    }
+    .input-checkbox{
+        margin-left: 1.3em;
+    }
+    .div-infos button{
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+
+        width: 7em;  height: 2.8em;
+        background-color: #0084ff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+    }
+
+    .span-check{
+        display: flex;
+        flex-direction: row;
+        margin-right: 1em;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #888888;
+    }
+}

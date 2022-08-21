@@ -1,33 +1,6 @@
-body{
-    background-color: #F5F6FA;
-}
-
-.page-ve{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: "inter", sans-serif;
-    margin-bottom: 5em;
-
-    .sec-sobremim{
-        box-shadow: 0px 0px 14px 1px rgba(173, 173, 173, 0.25);
-        align-items: center;
-        margin-top: 3em;
-        background-color: #fff;
-        width: 30em;
-        border-radius: 10px;
-        height: 23em; max-height: 50em;
-        padding-left: 2.5em;
-        padding-bottom: 1.5em;
-    }
-
-/*****************************************************************************************/
-/*****************************************************************************************/
-/*****************************************************************************************/
-
-    .div-ficha{
-        padding-top: 2em;
-    }
+.div-ficha{
+    padding-top: 2em;
+    
     h2{
         color: #646464;
         font-size: 20px;
@@ -57,7 +30,7 @@ body{
         margin-left: 1.717em;
     }
 
-    
+
     .diferentona{
         display: flex;
         flex-direction: row;
