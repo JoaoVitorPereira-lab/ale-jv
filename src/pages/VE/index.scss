@@ -1,0 +1,155 @@
+body{
+    background-color: #F5F6FA;
+}
+
+.page-ve{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "inter", sans-serif;
+    margin-bottom: 5em;
+
+    .div-ve{
+        box-shadow: 0px 0px 14px 1px rgba(173, 173, 173, 0.25);
+        align-items: center;
+        margin-top: 3em;
+        background-color: #fff;
+        width: 30em;
+        border-radius: 10px;
+        height: 23em;
+        padding-left: 2.5em;
+    }
+
+    h3{
+        margin: 2em 0em 1.5em 0em;
+        font-family: 'Inter', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        color: #646464;
+    }
+    input{
+        font-family: "inter", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17px;
+        padding: .4em;
+        color: #BFBFBF;
+
+        background: #FFFFFF;
+        border: 1px solid #DFDFDF;  
+        box-shadow: 0px 0px 7px rgba(218, 218, 218, 0.3);
+        border-radius: 3px;
+    }
+    input:focus{
+        color: #000;
+        outline: none;
+    }
+    input::placeholder{
+        font-family: "inter", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17px;
+        color: #BFBFBF;
+    }
+
+    .div-infos{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        margin-top: 1em;
+    }
+    .nome{
+        width: 17.1em; height: 2.3em;
+    }
+    .data{
+        margin-left: 1em;
+        width: 10em; height: 2.3em;
+    }
+    .medida{
+        width: 3em; height: 2.3em;
+    }
+    .peso{
+        margin-left: 1em;
+    }
+    .input-checkbox{
+        margin-left: 1.3em;
+    }
+    .div-infos button{
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 15px;
+        text-align: center;
+
+        width: 8em;  height: 3em;
+        background-color: #0084ff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+    }
+
+    .span-check{
+        display: flex;
+        flex-direction: row;
+        margin-right: 1em;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #888888;
+    }
+
+/*****************************************************************************************/
+/*****************************************************************************************/
+/*****************************************************************************************/
+
+    h2{
+        color: #646464;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    text{
+        color: #646464;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .div-ficha span:not(.span-diferentona){
+        margin-left: .2em;
+        color: #BFBFBF;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+
+    .sec-nome{
+        margin-left: 2.9em;
+    }
+    .sec-nascimento{
+        margin-left: .4em;
+    }
+    .sec-trabalha{
+        margin-left: 1.717em;
+    }
+
+    
+    .diferentona{
+        display: flex;
+        flex-direction: row;
+    }
+    .diferentona div:not(.not-div){
+        margin-left: 2.7em; 
+    }
+    .not-div{
+        margin-left: 2.8em;
+    }
+    .not-div .alt{
+        margin-left: .2em;
+    }
+    .span-diferentona{
+        margin-left: 0em;
+        color: #BFBFBF;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
