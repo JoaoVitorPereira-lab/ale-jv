@@ -9,7 +9,15 @@ export default function Planos(){
     const [cor, setCor] = useState('');
 
     function exibir(){
-        setMostrar(true)
+        setMostrar(true);
+        if(setMostrar === true){
+            if(!plano || plano === ''){
+                alert("Digite o plano!!!");
+            }
+            else{
+                setMostrar(true);
+            }
+        }
     }
 
     return(
@@ -52,7 +60,13 @@ export default function Planos(){
                         </div>
 
                         <div className='card'>
-                            <figure className='cor-escolhida'>{cor}</figure>
+                            <input  disabled
+                                    type="color" 
+                                    className='cor-escolhida'
+                                    value={cor}
+                                    id="cor-bola"
+                            >
+                            </input>
 
                             <text> {plano} </text>
 

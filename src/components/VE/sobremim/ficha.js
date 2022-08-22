@@ -1,4 +1,5 @@
 import './ficha.scss'
+/* props.idade(props.nascimento) calcular idade, que deu errado*/
 
 export default function Ficha(props) {
 
@@ -15,7 +16,7 @@ export default function Ficha(props) {
 
                     <section className='sec-nascimento'>
                         <text> Nascimento: </text>
-                        <span> {props.nascimento} ({props.idade(props.nascimento)} anos) </span>
+                        <span> {props.nascimento} ( anos) </span>
                     </section>
 
                     <section className='diferentona'>

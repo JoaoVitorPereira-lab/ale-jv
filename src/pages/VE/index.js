@@ -31,7 +31,7 @@ export default function VariaveldeEstado(){
         return resposta;
     }
 
-    function idade(nasc){
+    /* function idade(nasc){
         var data = new Date();
         var ano = data.getFullDate();
         var mes = data.getMonth();
@@ -45,7 +45,7 @@ export default function VariaveldeEstado(){
 
         let resposta = Number(anoAtual - nascimentoUser);
         return resposta;
-    }
+    } */
 
     return(
         <div className='page-ve'>
@@ -68,7 +68,7 @@ export default function VariaveldeEstado(){
                     peso={peso}
                     calcularIMC={calcularIMC}
                     checado={checado}
-                    idade={idade}
+                    /* idade={idade} */
                 />
             </section>
 

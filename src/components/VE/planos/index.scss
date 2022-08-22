@@ -129,13 +129,14 @@
         cursor: normal;
     }
 
-    .card figure{
-        margin-top: 1em;
-        width: 3.8em; padding-top: 3em;
-        background: #0084FF;
-        border-radius: 19px;
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
     }
     .card text{
+        margin-top: .5em;
         width: 8em;
         font-weight: 800;
         font-size: 16px;
@@ -152,5 +153,26 @@
         font-weight: 500;
         font-size: 10px;
         color: #AEAEAE;
+    }
+
+    .card #cor-bola{
+        margin-left: -.1em;
+        width: 4.5em; height: 4em;
+        border: transparent;
+        cursor: normal;
+        margin-top: 1em;
+    }
+    .card #cor-bola::-webkit-color-swatch{
+        border-radius: 20px;
+        border: none;
+    }
+    .card #cor-bola:focus{
+        display: block;
+    }
+    .card #cor-bola:hover{
+        display: block;
+    }
+    .card #cor-bola:active{
+        display: block;
     }
 }
