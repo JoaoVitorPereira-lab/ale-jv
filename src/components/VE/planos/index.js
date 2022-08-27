@@ -3,21 +3,15 @@ import './index.scss'
 
 export default function Planos(){
 
-    const [mostrar, setMostrar] = useState(false)
-    const [plano, setPlano] = useState('');
-    const [situacao, setSituacao] = useState('');
-    const [cor, setCor] = useState('');
+    const [lista, setLista] = useState([]);
 
-    function exibir(){
-        setMostrar(true);
-        if(setMostrar === true){
-            if(!plano || plano === ''){
-                alert("Digite o plano!!!");
-            }
-            else{
-                setMostrar(true);
-            }
-        }
+    const [plano, setPlano] = useState(''); 
+    const [cor, setCor] = useState('');
+    const [situacao, setSituacao] = useState('');
+
+    function adicionarPlano(){
+        let novaLista = [...lista, [cor, plano, situacao]];
+        setLista(novaLista);
     }
 
     return(
@@ -43,12 +37,13 @@ export default function Planos(){
                         value={situacao}
                         onChange={e => setSituacao(e.target.value)}
                         type="text" 
-                        placeholder='Digite aqui a situação'/>
-                <button className='button-adicionar' onClick={exibir}> Adicionar </button>
+                        placeholder='Digite aqui a situação'
+                />
+                <button className='button-adicionar' onClick={adicionarPlano}> Adicionar </button>
             </div>
 
-            {mostrar === true &&
-                <aside>
+            <aside>
+                {lista.map(item =>
                     <div className='div-center'>
                         <div className='button-edit-remover'>
                             <button className='edit-planos'>
@@ -63,19 +58,19 @@ export default function Planos(){
                             <input  disabled
                                     type="color" 
                                     className='cor-escolhida'
-                                    value={cor}
-                                    id="cor-bola"
-                            >
-                            </input>
+                                    value={item.cor}
+                                    id="cor-bola" 
+                            />
 
-                            <text> {plano} </text>
+                            <text> {item.plano} </text>
 
                             <p> situação </p>
-                            <h4> {situacao} </h4>
+                            <h4> {item.situacao} </h4>
                         </div>
                     </div>
-                </aside>
-            }
+                )}
+            </aside>
+            
         </section>
     )
 }

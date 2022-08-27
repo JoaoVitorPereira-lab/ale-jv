@@ -1,0 +1,70 @@
+.div-somar{
+    width: 30.7em;
+    height: 7em;
+    padding: .6em 0em 1em 1.7em;
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 14px 1px rgba(173, 173, 173, 0.25);
+    border-radius: 6px;
+
+    .somar-row{
+        flex-direction: row;
+    }
+    p{
+        font-family: 'inter', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        color: #646464;
+    }
+
+    input:hover{
+        outline: none;
+    }
+    input:focus{
+        outline: none;
+    }
+
+    #num1{
+        margin-right: 1em;
+    }
+    #num1,
+    #num2{
+        padding-left: 1em;
+        width: 5.6em;
+        height: 3em;
+
+        border: 1px solid #DFDFDF;
+        box-shadow: 0px 0px 14px 1px rgba(173, 173, 173, 0.25);
+        border-radius: 3px;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    button{
+        width: 7em;
+        height: 2.9em;
+        margin-left: 2em;
+        margin-right: 2em;
+
+        font-family: 'inter', sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        color: #ffffff;
+
+        background-color: #0084FF;
+        border: transparent;
+        border-radius: 3px;
+    }
+    #resultado{
+        padding-left: 1em;
+        width: 3em;
+        height: 3em;
+
+        border: 1px dotted #DFDFDF;
+        border-style: dashed;
+        border-radius: 3px;
+    }
+}

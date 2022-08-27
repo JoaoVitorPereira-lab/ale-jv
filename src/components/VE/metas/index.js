@@ -23,7 +23,11 @@ export default function Tarefas(props) {
                 <h1>Metas para os próximos 5 anos</h1>
 
                 <div>
-                    <input type='text' placeholder='Digite aqui a meta' value={tarefa} onChange={e => setTarefa(e.target.value)} />
+                    <input  type='text' 
+                            placeholder='Digite aqui a meta'   
+                            value={tarefa} 
+                            onChange={e => setTarefa(e.target.value)} 
+                    />
                     <button onClick={adicionarTarefa}>Adicionar</button>
                 </div>
                 <ul>

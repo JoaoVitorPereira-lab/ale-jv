@@ -78,4 +78,10 @@
         line-height: 17px;
         color: #888888;
     }
+
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
 }

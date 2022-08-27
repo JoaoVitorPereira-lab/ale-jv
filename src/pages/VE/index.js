@@ -3,7 +3,8 @@ import './index.scss'
 import SobreMim from '../../components/VE/sobremim/sobremim'
 import Ficha from '../../components/VE/sobremim/ficha'
 import Metas from '../../components/VE/metas'
-import Planos from '../../components/VE/planos/index'
+import Planos from '../../components/VE/planos'
+import Somar from '../../components/VE/somar'
 
 export default function VariaveldeEstado(){
     
@@ -49,6 +50,10 @@ export default function VariaveldeEstado(){
 
     return(
         <div className='page-ve'>
+            <div>
+                <Somar />
+            </div>
+
             <section className='sec-sobremim'>
                 <SobreMim 
                     nome={nome}             nascimento={nascimento}
