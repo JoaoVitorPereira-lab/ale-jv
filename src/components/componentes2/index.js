@@ -21,7 +21,7 @@ export default function Componente2(props){
                     </div>
 
                     <div className='div-button'>
-                        <button> Hobby </button>
+                        <button className="button-hobby"> Hobby </button>
                     </div>
                 </div>
             </aside>

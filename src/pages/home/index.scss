@@ -1,0 +1,22 @@
+.home{
+    text-align: center;
+    .button {
+        width: 10em; height: 4em;
+
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        text-align: center;
+        background-color: #0084FF;
+        color: #fff;
+        border-radius: 3px;
+        border: transparent;
+        margin-left: 1em;
+        cursor: pointer;
+    }
+
+    .button:not(.none-button){
+        margin-top: 1em;
+    }
+}
+

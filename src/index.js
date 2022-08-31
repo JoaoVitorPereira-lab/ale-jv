@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
 import './index.css';
-import VE from './pages/efeito/index'
+
+import Routes from './routes';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <VE />
+    <Routes />
   </React.StrictMode>
 );

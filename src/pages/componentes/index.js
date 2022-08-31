@@ -4,7 +4,7 @@ import Componente from '../../components/componentes'
 export default function Componentes() {
     
     return (
-        <div>
+        <div className='comp'>
             <div className='div-titulo'>
                 <h1> Estudando ReactJS | Componentes </h1>
             </div>
